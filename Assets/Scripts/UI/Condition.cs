@@ -8,6 +8,7 @@ public class Condition : MonoBehaviour
     public float startValue;
     public float maxValue;
     public float passiveValue;
+    public float sprintValue;
     public Image uiBar;
 
     // Start is called before the first frame update
