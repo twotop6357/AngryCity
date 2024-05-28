@@ -11,7 +11,6 @@ public class PoolAble : MonoBehaviour
     }
     public void ReleaseObject()
     {
-        Debug.Log(ObjectPoolManager.instance.GetGo(transform.name));
         Pool.Release(gameObject);
     }
 }

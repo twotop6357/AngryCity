@@ -35,7 +35,6 @@ public class Condition : MonoBehaviour
 
     public void Subtract(float value)
     {
-        Debug.Log("±ð¿´Siu");
         curValue = Mathf.Max(curValue - value, 0);
     }
 }
