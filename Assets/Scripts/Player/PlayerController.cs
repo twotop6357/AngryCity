@@ -3,6 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioClip walkingSound;
+    public AudioClip sprintSound;
+    private AudioSource audioSource;
+    private bool isWalking;
+
     [Header("Movement")]
     public float moveSpeed;
     public float sprintSpeed;
@@ -32,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -54,6 +61,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(isWalking == true && isSprint == false)
+        {
+            if(!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(walkingSound);
+            }
+        }
+        else if(isWalking == true && isSprint == true)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(sprintSound);
+            }
+        }
+    }
+
     public void OnLookInput(InputAction.CallbackContext context)
     {
         mouseDelta = context.ReadValue<Vector2>();
@@ -64,10 +89,12 @@ public class PlayerController : MonoBehaviour
         if(context.phase == InputActionPhase.Performed)
         {
             curMovementInput = context.ReadValue<Vector2>();
+            isWalking = true;
         }
         else if(context.phase == InputActionPhase.Canceled)
         {
             curMovementInput = Vector2.zero;
+            isWalking = false;
         }
     }
 
