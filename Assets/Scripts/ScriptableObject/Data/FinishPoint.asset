@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97106f1868becc4e97ff67c0e251162, type: 3}
   m_Name: FinishPoint
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
+  displayName: "\uC57D\uC18D \uC7A5\uC18C"
+  description: "E\uB97C \uB20C\uB7EC \uCE5C\uAD6C\uB97C \uB9CC\uB098\uC138\uC694!"
