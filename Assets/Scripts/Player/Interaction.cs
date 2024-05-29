@@ -18,6 +18,8 @@ public class Interaction : MonoBehaviour
 
     public TextMeshProUGUI promptText;
     private Camera camera;
+
+    public AudioSource audioSource;
    
     void Start()
     {
@@ -64,6 +66,7 @@ public class Interaction : MonoBehaviour
         {
             curInteractable.OnInteract();
             curInteractingItem.UseItem();
+            audioSource.Play();
             curBoxCollider.enabled = false;
             curInteractGameObject = null;
             curInteractable = null;

@@ -84,7 +84,7 @@ MonoBehaviour:
   durationTime: 60
   duration: 60
   additionalHealth: 200
-  heartEffect: {fileID: 0}
+  image: {fileID: 0}
 --- !u!1 &5589337485818869704
 GameObject:
   m_ObjectHideFlags: 0
