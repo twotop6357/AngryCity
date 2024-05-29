@@ -22,5 +22,10 @@ public class Timer : MonoBehaviour
             sec -= 60f;
         }
         TimerText.text = string.Format("{0:D2} : {1:D2}", min, (int)sec);
+
+        if(min == 0 && sec == 0f)
+        {
+            CharacterManager.Instance.Player.condition.uiCondition.health.Subtract(CharacterManager.Instance.Player.condition.uiCondition.health.curValue);
+        }
     }
 }

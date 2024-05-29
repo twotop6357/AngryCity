@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97106f1868becc4e97ff67c0e251162, type: 3}
   m_Name: Item_HealthBoost
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
+  displayName: "\uC2A4\uD2F8\uD558\uD2B8"
+  description: "\uC7A0\uC2DC \uB3D9\uC548 \uCD5C\uB300 \uCCB4\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4."
