@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float sec = 60;
-    public int min = 0;
+    public float sec;
     public TextMeshProUGUI TimerText;
 
     private void Awake()
@@ -16,16 +15,19 @@ public class Timer : MonoBehaviour
     private void Update()
     {
         sec -= Time.deltaTime;
-        if(min >= 60f)
+        if(sec <= 0f)
         {
-            min += 1;
-            sec -= 60f;
+            sec = 0f;
         }
-        TimerText.text = string.Format("{0:D2} : {1:D2}", min, (int)sec);
-
-        if(min == 0 && sec == 0f)
+        if (sec == 0f)
         {
             CharacterManager.Instance.Player.condition.uiCondition.health.Subtract(CharacterManager.Instance.Player.condition.uiCondition.health.curValue);
         }
+        TimerText.text = string.Format("{0:D2}ÃÊ ³²À½!", (int)sec+1);
+    }
+
+    public void AddTime(float time)
+    {
+        sec += time;
     }
 }

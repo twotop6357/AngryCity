@@ -8,7 +8,7 @@ public class StaminaBoost : Item
     public float duration;
     public float additionalStamina;
     public float additionalPassive;
-    public Image staminaBoostEffect;
+    public Image image;
     private Coroutine staminaBoostCoroutine;
 
     private void Awake()
@@ -16,10 +16,18 @@ public class StaminaBoost : Item
         Initialize(duration);
     }
 
+    private void Start()
+    {
+        Canvas canvas = FindObjectOfType<Canvas>();
+        Transform effect = canvas.transform.Find("Effect");
+        Transform EffectTransform = effect.transform.Find("StaminaEffect");
+        image = EffectTransform.GetComponent<Image>();
+    }
+
     public override void UseItem()
     {
         base.UseItem();
-        staminaBoostEffect.gameObject.SetActive(true);
+        image.gameObject.SetActive(true);
         Transform child = transform.Find("Penta");
         child.gameObject.SetActive(false);
         if(staminaBoostCoroutine != null)
@@ -37,7 +45,7 @@ public class StaminaBoost : Item
         CharacterManager.Instance.Player.condition.uiCondition.stamina.maxValue -= additionalStamina;
         CharacterManager.Instance.Player.condition.uiCondition.stamina.passiveValue -= additionalPassive;
         staminaBoostCoroutine = null;
-        staminaBoostEffect.gameObject.SetActive(false);
+        image.gameObject.SetActive(false);
         Destroy(gameObject);
     }
 }

@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 1718451600896459818}
   - component: {fileID: 7842701882601564640}
   - component: {fileID: 1230123242553250638}
+  - component: {fileID: 5896593816715103780}
   m_Layer: 7
   m_Name: Item_SpeedStar
   m_TagString: Untagged
@@ -134,8 +135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4710697708468618795}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 0.78, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.978149, y: -1.7320812, z: 3.3073823}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -176,3 +177,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: a7f723ea8d765ad45bf6a62b06bfa733, type: 2}
+--- !u!114 &5896593816715103780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710697708468618795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a160edbd7d68948baac8ac1ffc8553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  durationTime: 5
+  duration: 5
+  additionalSpeed: 15
+  sprintEffect: {fileID: 0}

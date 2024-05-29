@@ -6,7 +6,7 @@ public class HeartBoost : Item
 {
     public float duration;
     public float additionalHealth;
-    public Image heartEffect;
+    public Image image;
     private Coroutine heartBoostCoroutine;
 
     private void Awake()
@@ -14,10 +14,18 @@ public class HeartBoost : Item
         Initialize(duration);
     }
 
+    private void Start()
+    {
+        Canvas canvas = FindObjectOfType<Canvas>();
+        Transform effect = canvas.transform.Find("Effect");
+        Transform EffectTransform = effect.transform.Find("HealthEffect");
+        image = EffectTransform.GetComponent<Image>();
+    }
+
     public override void UseItem()
     {
         base.UseItem();
-        heartEffect.gameObject.SetActive(true);
+        image.gameObject.SetActive(true);
         Transform child = transform.Find("Object");
         child.gameObject.SetActive(false);
         if(heartBoostCoroutine != null)
@@ -35,7 +43,7 @@ public class HeartBoost : Item
         CharacterManager.Instance.Player.condition.uiCondition.health.maxValue -= additionalHealth;
         CharacterManager.Instance.Player.condition.uiCondition.health.curValue = CharacterManager.Instance.Player.condition.uiCondition.health.maxValue;
         heartBoostCoroutine = null;
-        heartEffect.gameObject.SetActive(false) ;
+        image.gameObject.SetActive(false) ;
         Destroy(gameObject);
     }
 }

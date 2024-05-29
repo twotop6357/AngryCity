@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 1964367232205243806}
   - component: {fileID: 8814323767131342898}
   - component: {fileID: 2181441706068672975}
+  - component: {fileID: 1837709767925234043}
   m_Layer: 7
   m_Name: Item_StaminaBoost
   m_TagString: Untagged
@@ -134,8 +135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8651915148609541601}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.78, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.158149, y: -1.7320812, z: 0.43738222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -176,3 +177,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bc9daf6f16fece341b6c67342a01a0c4, type: 2}
+--- !u!114 &1837709767925234043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8651915148609541601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda139a733ab7894c8c09c962732348d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  durationTime: 10
+  duration: 10
+  additionalStamina: 450
+  additionalPassive: 100
+  staminaBoostEffect: {fileID: 0}
