@@ -9,8 +9,7 @@ public class UIButtonController : MonoBehaviour
     public void ReturnButton()
     {
         finishPanel.SetActive(false);
-        //SceneManager.LoadScene()
-        Debug.Log("돌아가기");
+        SceneManager.LoadScene("IntroScene");
     }
 
     public void RetryButton()

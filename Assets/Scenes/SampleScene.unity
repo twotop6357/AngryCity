@@ -54116,7 +54116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad8e30b02cb45141a8dfffbd2be7550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sec: 10
+  sec: 60
   TimerText: {fileID: 1639305191}
 --- !u!114 &1639305191
 MonoBehaviour:
