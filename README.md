@@ -15,7 +15,7 @@
 
 ## 🚓 게임 설명
 - 와이어프레임
-
+![wf](https://github.com/twotop6357/AngryCity/blob/main/Images/wf.png)
 - 충돌 요소 검사를 통해 게임의 승패가 결정되며 제한 시간 안에 특정 장소로 이동하여 클리어하는 게임입니다.
 
 ## 🚕 게임 플레이 방식
@@ -33,9 +33,9 @@ https://youtu.be/ChMOrDgIWF0
 
 |  |  |  |
 | --- | --- | --- |
-| 사진  | 사진 | 사진 |
+| ![Start](https://github.com/twotop6357/AngryCity/blob/main/Images/Start.png) | ![help](https://github.com/twotop6357/AngryCity/blob/main/Images/help.png) | ![Intro](https://github.com/twotop6357/AngryCity/blob/main/Images/Intro.png) |
 | 시작화면 | 도움말 | 인트로 |
-| 사진 | 사진 | 사진 |
+| ![interaction](https://github.com/twotop6357/AngryCity/blob/main/Images/interaction.png) | ![gameover](https://github.com/twotop6357/AngryCity/blob/main/Images/gameover.png) | ![clear](https://github.com/twotop6357/AngryCity/blob/main/Images/clear.png) |
 | 상호작용 | 게임오버 | 게임클리어 |
 
 ## 🛴 사용 에셋
